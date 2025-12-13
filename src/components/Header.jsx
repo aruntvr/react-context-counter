@@ -1,10 +1,9 @@
-import counterStore from '../stores/Counter';
-import {useContext} from 'react';
+import { useCounter } from '../stores/useCounter';
 
 function Header({headerName}) {
-    const {counterState} = useContext(counterStore);
+    const { counter } = useCounter();
 
-    return <h1>{headerName} : {counterState.counter}</h1>
+    return <h1>{headerName} : {counter}</h1>
 }
 
 export default Header;
